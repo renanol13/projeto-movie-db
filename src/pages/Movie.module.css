@@ -9,10 +9,10 @@
 .boxMain{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     transform: translatey(-250px);
+    height: 80vh;
 }
 
 
@@ -88,6 +88,7 @@
         flex-direction: row;
         position: absolute;
         padding-left: 2em;
+        height: initial;
     }
 }
 
