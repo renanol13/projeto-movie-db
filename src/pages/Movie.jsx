@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import UseFetch from "../hooks/useFetch";
-import { FaStar } from "react-icons/Fa";
+import { IoStar } from "react-icons/io5";
 
 import styles from "./Movie.module.css";
 import Loading from "../Componentes/Loading";
@@ -14,7 +14,6 @@ export default function Movie() {
   const { id } = useParams();
 
   const { data, loading } = UseFetch(`${movieURL}${id}?${apiKey}`);
-  console.log(data);
 
   return (
     <>
@@ -39,7 +38,7 @@ export default function Movie() {
                 <h2>{data.title}</h2>
                 <p className={styles.overview}>{data.overview}</p>
                 <p>
-                  <FaStar /> {data.vote_average}
+                  <IoStar /> {data.vote_average}
                 </p>
 
                 <p>
