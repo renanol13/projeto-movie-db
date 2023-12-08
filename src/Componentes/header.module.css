@@ -1,0 +1,61 @@
+.boxHeader{
+    height: 80px;
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+}
+
+.boxHeader h1 > a{
+    color: var(--color3);
+    text-decoration: none;
+}
+
+.boxHeader form{
+    height: 28px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2px;
+    width: 35%;
+}
+
+.boxHeader form > input{
+    height: 100%;
+    padding: .5em;
+    border: none;
+    color: var(--color2);
+    width: 80%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.boxHeader form > input::placeholder{
+    color: var(--color2);
+    font-weight: 500;
+}
+
+.boxHeader form button{
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0px .3em;
+    background-color: var(--color3);
+    transition: .3s;
+}
+
+.boxHeader form button svg{
+    width: 20px;
+    height: 20px;
+}
+
+.boxHeader form button:hover{
+    color: var(--color3);
+    background-color: var(--color4);
+}

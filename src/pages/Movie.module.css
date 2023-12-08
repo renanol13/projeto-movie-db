@@ -1,0 +1,93 @@
+.boxBackdrop{
+    width: 100%;
+    height: 60vh;
+    opacity: .7;
+    position: sticky;
+    top: 80px;
+}
+
+.boxMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translatey(-250px);
+}
+
+
+.boxCover {  
+    margin-bottom: 20px;
+    width: 340px;
+    height: 400px;
+    background-color: black;
+}
+
+.boxData{
+    padding: .8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.83);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.334);
+}
+
+.boxData span{
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.749);
+}
+
+
+.boxData h2{
+    color: var(--color3);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.boxData .overview{
+    text-indent: 20px;
+    margin-bottom: 40px;
+    line-height: 25px;
+    max-width: 700px;
+}
+
+.boxData p{
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    white-space: 3px;
+    letter-spacing: 1px;
+}
+
+.boxData svg{
+    color: var(--color4);
+}
+
+
+
+@media (min-width: 500px){
+    .boxCover{
+        max-width: 700px;
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 900px){
+
+    .boxBackdrop{
+        height: 70vh;
+    }
+
+    .boxCover{
+        max-width: 700px;
+        max-height: 900px;
+    }
+
+    .boxMain{
+        flex-direction: row;
+        position: absolute;
+        padding-left: 2em;
+    }
+}
+

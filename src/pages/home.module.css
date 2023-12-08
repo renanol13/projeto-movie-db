@@ -1,0 +1,12 @@
+.boxShowMovies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxMovies h2{
+    padding: 10px 0px 20px 8px;
+    font-size: 2em;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.959);
+}

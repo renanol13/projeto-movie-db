@@ -1,0 +1,14 @@
+.boxFooter{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: var(--color2);
+    color: var(--color3);
+}
+
+.boxFooter svg{
+    color: var(--color3);
+}
