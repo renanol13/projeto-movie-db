@@ -16,7 +16,7 @@ export default function Search() {
 
   const { data, loading } = UseFetch(`${searchURL}?${apiKey}&query=${params}`);
   
-    
+  console.log(data);
   return (
     <>
       {loading ? <Loading/> : data.results && data?.results.length > 0 ? (

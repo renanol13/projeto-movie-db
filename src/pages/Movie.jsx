@@ -14,7 +14,7 @@ export default function Movie() {
   const { id } = useParams();
 
   const { data, loading } = UseFetch(`${movieURL}${id}?${apiKey}`);
-
+  console.log(data);
   return (
     <>
       {loading ? (
