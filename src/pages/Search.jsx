@@ -8,6 +8,7 @@ const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 import styles from "./search.module.css";
+import { useLayoutEffect } from "react";
 
 export default function Search() {
   const [searchParams] = useSearchParams();
@@ -15,8 +16,11 @@ export default function Search() {
   const params = searchParams.get("q");
 
   const { data, loading } = UseFetch(`${searchURL}?${apiKey}&query=${params}`);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0,0)
+  }, [searchParams])
   
-  console.log(data);
   return (
     <>
       {loading ? <Loading/> : data.results && data?.results.length > 0 ? (

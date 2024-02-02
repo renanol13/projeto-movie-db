@@ -4,6 +4,7 @@ import { IoStar } from "react-icons/io5";
 
 import styles from "./Movie.module.css";
 import Loading from "../Componentes/Loading";
+import { useLayoutEffect } from "react";
 
 const movieURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -13,8 +14,11 @@ export default function Movie() {
 
   const { id } = useParams();
 
+  useLayoutEffect(() => {
+    window.scrollTo(0,0)
+  }, [id])
+
   const { data, loading } = UseFetch(`${movieURL}${id}?${apiKey}`);
-  console.log(data);
   return (
     <>
       {loading ? (
