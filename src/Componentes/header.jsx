@@ -30,7 +30,7 @@ export default function Header() {
       <form onSubmit={fromPageSearch}>
         <input
           type="text"
-          placeholder='Search...'
+          placeholder='Pesquisar...'
           value={value}
           onChange={(e)=>setValue(e.target.value)}
         />

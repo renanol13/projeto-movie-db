@@ -13,12 +13,21 @@ const imageUrl = import.meta.env.VITE_IMG;
 export default function Movie() {
 
   const { id } = useParams();
+  const { data, loading } = UseFetch(`${movieURL}${id}?${apiKey}&language=pt-BR`);
 
   useLayoutEffect(() => {
     window.scrollTo(0,0)
   }, [id])
 
-  const { data, loading } = UseFetch(`${movieURL}${id}?${apiKey}`);
+
+
+  const formatMoney = (value) => {
+    return value?.toLocaleString(navigator.language, {
+      style: "currency",
+      currency: "USD",
+    })
+  }
+
   return (
     <>
       {loading ? (
@@ -42,20 +51,20 @@ export default function Movie() {
                 <h2>{data.title}</h2>
                 <p className={styles.overview}>{data.overview}</p>
                 <p>
-                  <IoStar /> {data.vote_average}
+                  <IoStar /> {data.vote_average?.toFixed(1)}
                 </p>
 
                 <p>
-                    {data.runtime}<span> Minutes</span>
+                    {data.runtime}<span> Minutos</span>
                 </p>
                 <p>
-                  <span>Budget: </span>${data.budget}
+                  <span>Gastos: </span>{formatMoney(data.budget)}
                 </p>
                 <p>
-                  <span>Revenue: </span>${data.revenue}
+                  <span>Receita: </span>{formatMoney(data.revenue)}
                 </p>
                 <p>
-                  <span>Release date of: </span>
+                  <span>Data de lançamento: </span>
                   {data.release_date}
                 </p>
               </div>

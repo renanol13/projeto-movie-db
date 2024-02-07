@@ -21,6 +21,7 @@
     width: 340px;
     height: 400px;
     background-color: black;
+    border-radius: 8px;
 }
 
 .boxData{

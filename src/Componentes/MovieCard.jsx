@@ -29,7 +29,7 @@ export default function MovieCard({ movie }) {
       <p>{movie.title}</p>
       {ShowDetails && (
         <div className={styles.boxShow}>
-          <Link to={`/detailMovie/${movie.id}`}>Details</Link>
+          <Link to={`/detailMovie/${movie.id}`}>Detalhes</Link>
         </div>
       )}
     </div>
